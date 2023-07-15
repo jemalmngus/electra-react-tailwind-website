@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 const HeroSection: React.FC = () => {
   const [typedText, setTypedText] = useState('');
   const targetText = "Welcome to E3 Expo 2023 ";
-  // const expoText = "";
   const startingIndex = 8; // Index where the "Welcome" portion ends
 
   useEffect(() => {
@@ -24,11 +23,13 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-gray-900 text-white py-20">
+    <section
+      className="bg-gray-900 text-white py-20"
+      style={{ backgroundImage: "url('https://picsum.photos/1920/1080')", backgroundSize: 'cover' }}
+    >
       <div className="container mx-auto flex flex-col items-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 text-center">
           {typedText}
-        
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-center">
           Discover the latest innovations and opportunities in electrical, broadcasting, and electro mechanical industries.

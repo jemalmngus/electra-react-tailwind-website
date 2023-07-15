@@ -1,4 +1,5 @@
 import React from "react";
+import LocationMap from "./LocationMap";
 
 const ContactSection: React.FC = () => {
   return (
@@ -11,7 +12,7 @@ const ContactSection: React.FC = () => {
             <p>123 Main Street, City, Country</p>
             <div className="mt-4">
               {/* Embedded map */}
-              <iframe
+              {/* <iframe
                 title="Map Location"
                 width="100%"
                 height="300"
@@ -20,8 +21,9 @@ const ContactSection: React.FC = () => {
                 marginHeight={0}
                 marginWidth={0}
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985.1630918714164!2d38.7787719034883!3d9.004099599427894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b8507daa5eac3%3A0x43d941c2419a94ed!2sAtlas%20International%20Hotel!5e0!3m2!1sen!2sde!4v1688794484299!5m2!1sen!2sde"
-              ></iframe>
+              ></iframe> */}
             </div>
+              <LocationMap />
           </div>
           <div className="p-4 bg-white rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-2">Contact Form</h3>

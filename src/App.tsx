@@ -6,6 +6,10 @@ import Footer from './components/Footer';
 import GoToTopButton from './components/GoToTopButton';
 import Exhibit from './pages/Exhibit';
 import Visit from './pages/Visit';
+import PrivacyPage from './pages/PrivacyPolicy';
+import BlogPage from './pages/BlogPage';
+import BlogDetailPage from './components/BlogDetailPage';
+import ExhibitorRegistrationPage from './components/ExhibtorRegisteration';
 // import Speak from './pages/Speak';
 // import Partner from './pages/Partner';
 
@@ -17,8 +21,11 @@ const App: React.FC = () => {
         <Route  path="/" Component={Home} />
         <Route path="/exhibit" Component={Exhibit} />
         <Route path="/visit" Component={Visit} />
+        <Route path="/privacy" Component={PrivacyPage} />
+        <Route path="/blog" Component={BlogPage} />
+        <Route  path="/blog/:id" Component={BlogDetailPage} />
+        <Route path="/exhibitor-register" Component={ExhibitorRegistrationPage} />
         {/*
-        <Route path="/speak" component={Speak} />
         <Route path="/partner" component={Partner} />
          */}
       </Switch>

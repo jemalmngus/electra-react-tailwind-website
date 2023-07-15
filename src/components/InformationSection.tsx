@@ -1,40 +1,35 @@
 import React from 'react';
 import CountUp from 'react-countup';
+import { FaUsers, FaUsersCog, FaUserFriends, FaClock, FaVolumeUp } from 'react-icons/fa';
 
 const InformationSection: React.FC = () => {
-  const partnersCount = 25; // Number of partners
-  const industryExpertsCount = 10; // Number of industry experts
-  const participantsCount = 500; // Number of participants
-  const duration = '3 Days'; // Duration of the expo
+  const infoData = [
+    { icon: <FaUsers />, count: 25, text: 'Partners' },
+    { icon: <FaUsersCog />, count: 10, text: 'Industry Experts' },
+    { icon: <FaUserFriends />, count: 500, text: 'Participants' },
+    { icon: <FaClock />, count: 3, text: 'Expo Duration' },
+    { icon: <FaVolumeUp />, count: 5, text: 'Speakers' },
+  ];
+
+  const speakersCount = 5; // Number of speakers
 
   return (
-    <section className="py-10 bg-gray-200">
+    <section className="py-10 bg-gray-800">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Information</h2>
-        <div className="flex justify-around">
-          <div className="text-center">
-            <h3 className="text-4xl font-bold">
-              <CountUp end={partnersCount} duration={2} separator="," />
-            </h3>
-            <p className="text-lg">Partners</p>
-          </div>
-          <div className="text-center">
-            <h3 className="text-4xl font-bold">
-              <CountUp end={industryExpertsCount} duration={2} separator="," />
-            </h3>
-            <p className="text-lg">Industry Experts</p>
-          </div>
-          <div className="text-center">
-            <h3 className="text-4xl font-bold">
-              <CountUp end={participantsCount} duration={2} separator="," />
-            </h3>
-            <p className="text-lg">Participants</p>
-          </div>
-          <div className="text-center">
-            <h3 className="text-4xl font-bold">{duration}</h3>
-            <p className="text-lg">Expo Duration</p>
-          </div>
+        <h2 className="text-3xl font-bold text-center text-white mb-2">Information</h2>
+        <p className="text-lg text-center text-white mb-8">Get all the details about the event</p>
+        <div className="flex justify-evenly items-center">
+          {infoData.map((item, index) => (
+            <div className="text-center flex flex-col items-center " key={index}>
+              <div className="text-5xl text-white mb-4">{item.icon}</div>
+              <h3 className="text-4xl font-bold text-white">
+                <CountUp end={item.count} duration={2} separator="," />
+              </h3>
+              <p className="text-xl text-white">{item.text}</p>
+            </div>
+          ))}
         </div>
+        
       </div>
     </section>
   );

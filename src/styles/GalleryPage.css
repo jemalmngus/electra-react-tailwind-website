@@ -1,0 +1,23 @@
+.tabs-transition {
+  transition: opacity 0.3s;
+}
+
+.tab-item {
+  padding: 8px 12px;
+  font-size: 18px;
+  background-color: white;
+  color: gray;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-item:hover {
+  background-color: red;
+  color: white;
+}
+
+.tab-item.react-tabs__tab--selected {
+  background-color: red;
+  color: white;
+}

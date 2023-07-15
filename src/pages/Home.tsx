@@ -12,6 +12,7 @@ import InformationSection from "../components/InformationSection";
 import Page from "../components/Page";
 import AttendeesSection from "../components/AttendeesSection";
 import ScheduleSection from "../components/ScheduleSection";
+import Testimonial from "../components/Testimonials";
 
 const Home: React.FC = () => {
   return (
@@ -32,6 +33,7 @@ const Home: React.FC = () => {
         <FocusAreasSection />
         <ScheduleSpeakersSection />
         <ContactSection />
+        <Testimonial />
       </div>
     </Page>
   );

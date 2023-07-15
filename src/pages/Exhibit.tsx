@@ -11,6 +11,12 @@ import {
   faHandsHelping,
 } from "@fortawesome/free-solid-svg-icons";
 import BenefitsSection from "../components/BenefitsSection";
+import FAQ from "../components/FAQs";
+import PrivacyPolicy from "../components/PrivacyPolicy";
+import GalleryPage from "../components/GalleryPage";
+import OpeningHours from "../components/BussinessHours";
+import BusinessHours from "../components/BussinessHours";
+import NewsletterForm from "../components/SubscribeNewsletter";
 
 const ExhibitPage = () => {
   const benefitsData = [
@@ -79,6 +85,10 @@ const ExhibitPage = () => {
       </div>
 
       <BenefitsSection benefits={benefitsData} />
+      <FAQ />
+      <GalleryPage />
+      <BusinessHours />
+      <NewsletterForm />
 
       {/* Rest of the exhibit page content */}
     </div>
